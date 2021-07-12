@@ -1,5 +1,5 @@
 # Dacon_ParkingDemand
-Dacon Competition for Prediction to Parking Demand
+* URL : https://dacon.io/competitions/official/235745/overview/description
 * 대회 이름 : 주차수요 예측 AI 경진대회
 * 주최 : 한국토지주택공사
 * 주관 : 데이콘

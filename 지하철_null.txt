@@ -1,0 +1,16 @@
+grouped = group1.groupby(group1['공급유형'])
+group11 = grouped.get_group('국민임대') - 0 (해당 공급유형의 평균)
+group12 = grouped.get_group('영구임대') - 0
+group13 = grouped.get_group('임대상가') - NaN -> 해당 단지코드의 평균 -> 또 NaN이면 충남 지역 평균 -> 0
+group14 = grouped.get_group('공공임대(50년)') - NaN -> 해당 단지코드의 평균 -> 또 NaN이면 충남 지역 평균 -> 0
+
+grouped = group2.groupby(group2['공급유형'])
+group21 = grouped.get_group('공공임대(50년)') - NaN -> 해당 단지코드의 평균 -> 또 NaN이면 대전 지역 해당 공급유형의 평균 -> 또 NaN이면 대전 지역 평균
+group22 = grouped.get_group('국민임대') - 0.51 -> 해당 단지코드의 평균 -> 또 NaN이면 대전 지역 해당 공급유형의 평균 -> 또 NaN이면 대전 지역 평균
+group23 = grouped.get_group('영구임대') - 1.15 -> 해당 단지코드의 평균
+group24 = grouped.get_group('임대상가') - 1.24 -> 해당 단지코드의 평균
+group25 = grouped.get_group('공공분양') - NaN -> 대전 지역 평균 -> 해당 단지코드의 평균 -> 또 NaN이면 대전 지역 해당 공급유형의 평균 -> 또 NaN이면 대전 지역 평균 -> 0
+group26 = grouped.get_group('공공임대(10년)') - 0
+group27 = grouped.get_group('공공임대(분납)') - 0
+
+경상남도는 해당 단지코드의 평균값으로 채움
